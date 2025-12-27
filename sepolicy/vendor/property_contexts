@@ -24,12 +24,6 @@ gce.test                              u:object_r:vendor_video_prop:s0
 vilte.test                            u:object_r:vendor_video_prop:s0
 prepend.test                          u:object_r:vendor_video_prop:s0
 
-# Display
-init.svc.displayfeature-hal-1-0          u:object_r:vendor_displayfeature_prop:s0
-ro.vendor.histogram.enable               u:object_r:vendor_displayfeature_prop:s0
-ro.vendor.whitepoint_calibration_enable  u:object_r:vendor_displayfeature_prop:s0
-ro.vendor.xiaomi.bl.poll                 u:object_r:vendor_displayfeature_prop:s0
-
 # Fingerprint
 fpc_kpi                    u:object_r:vendor_fp_prop:s0
 gf.debug.dump_bigdata_data u:object_r:vendor_fp_prop:s0

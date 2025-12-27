@@ -641,18 +641,12 @@ vendor/lib64/libwvhidl.so
 
 # Display-Hardware
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek|b6fa0dedf2f63d1e50f5971d8ce0d08ac879e262
-vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
-vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
 vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so|9f896ca7b981834be9e1a1116c971394f95ece07
 vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so|30bc6b9fd5abe37f1c0b265b7448441776ee8f13
-vendor/lib/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
-vendor/lib/vendor.xiaomi.hardware.displayfeature@1.0.so
 vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so|20290857ee049b423dd1a8e493bf85a8653c4fea
 vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so|54b3be407037e4ac1f64c51ba4d0b96aba75d393
 vendor/lib64/hw/hwcomposer.mt6785.so
-vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
-vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
 
 # Fingerprint
 -vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml
@@ -1576,7 +1570,6 @@ vendor/etc/virtual-spn-conf-by-efpnn.xml
 vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
 vendor/lib/hw/dfps.mt6785.so
-vendor/lib/hw/displayfeature.default.so
 vendor/lib/hw/kmsetkey.beanpod.so
 vendor/lib/AVCSecureVdecCA.so
 vendor/lib/VP9SecureVdecCA.so
@@ -1754,7 +1747,6 @@ vendor/lib/s5kgw1sunny_mipi_raw_IdxMgr.so
 vendor/lib/s5kgw1sunny_mipi_raw_tuning.so
 vendor/lib/se_extn_client.so
 vendor/lib64/hw/dfps.mt6785.so
-vendor/lib64/hw/displayfeature.default.so
 vendor/lib64/hw/kmsetkey.beanpod.so
 vendor/lib64/APUWareUtilsServer.so
 vendor/lib64/APUWareXrpServer.so
