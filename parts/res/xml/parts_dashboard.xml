@@ -73,4 +73,23 @@
         </Preference>
     </PreferenceCategory>
 
+    <PreferenceCategory android:key="category_misound" android:title="@string/category_misound">
+        <SwitchPreferenceCompat
+            android:key="misound_enable"
+            android:title="@string/misound_enable_title"
+            android:summary="@string/misound_enable_summary" />
+        <ListPreference
+            android:key="misound_headset"
+            android:title="@string/misound_headset_title"
+            android:summary="@string/misound_headset_summary"
+            android:entries="@array/misound_headset_entries"
+            android:entryValues="@array/misound_headset_values" />
+        <ListPreference
+            android:key="misound_preset"
+            android:title="@string/misound_preset_title"
+            android:summary="@string/misound_preset_summary"
+            android:entries="@array/misound_preset_entries"
+            android:entryValues="@array/misound_preset_values" />
+    </PreferenceCategory>
+
 </PreferenceScreen>

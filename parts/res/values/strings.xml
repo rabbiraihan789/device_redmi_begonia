@@ -51,6 +51,33 @@
     <string name="vibration_title">Strength</string>
     <string name="vibration_summary">Strength of the haptic motor</string>
 
+    <string name="category_misound">Mi Sound Enhancer</string>
+    <string name="misound_enable_title">Mi Sound Enhancer</string>
+    <string name="misound_enable_summary">Enhance headphone playback with the stock MediaTek Mi Sound DSP</string>
+    <string name="misound_headset_title">Headphone type</string>
+    <string name="misound_headset_summary">Pick the headset the equalizer is tuned for</string>
+    <string name="misound_preset_title">Preset</string>
+    <string name="misound_preset_summary">Choose the listening scenario</string>
+
+    <string name="headset_1">Mi In-Ear (2013)</string>
+    <string name="headset_2">Mi Piston-1</string>
+    <string name="headset_4">Basic Edition</string>
+    <string name="headset_5">Mi Piston-2</string>
+    <string name="headset_8">Standard Edition</string>
+    <string name="headset_9">Mi Headphones</string>
+    <string name="headset_10">Youth Edition</string>
+    <string name="headset_11">Color Edition</string>
+    <string name="headset_13">Mi Capsule</string>
+    <string name="headset_14">Mi In-Ear Pro</string>
+    <string name="headset_15">Mi Comfort</string>
+    <string name="headset_16">Mi Noise Cancelling Type-C</string>
+    <string name="headset_17">Mi Noise Cancelling 3.5mm</string>
+
+    <string name="preset_smart">Smart</string>
+    <string name="preset_music">Music</string>
+    <string name="preset_video">Video</string>
+    <string name="preset_voice">Voice</string>
+
     <string name="mode_default">Default</string>
     <string name="mode_benchmark">Benchmark</string>
     <string name="mode_browser">Browser</string>
