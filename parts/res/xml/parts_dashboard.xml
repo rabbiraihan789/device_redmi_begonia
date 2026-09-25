@@ -28,6 +28,14 @@
         </Preference>
     </PreferenceCategory>
 
+    <PreferenceCategory android:key="category_input" android:title="@string/category_input">
+        <SwitchPreferenceCompat
+            android:key="dt2w_switch"
+            android:title="@string/dt2w_title"
+            android:summary="@string/dt2w_summary"
+            android:persistent="false" />
+    </PreferenceCategory>
+
     <PreferenceCategory android:key="category_thermal" android:title="@string/category_thermal">
         <Preference
             android:key="entry_thermal"

@@ -23,6 +23,7 @@
     <string name="screen_speaker">Clear speaker</string>
 
     <string name="category_cpu">Processor</string>
+    <string name="category_input">Input</string>
     <string name="category_thermal">Thermal</string>
     <string name="category_speaker">Audio</string>
 
