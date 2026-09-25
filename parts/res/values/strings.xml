@@ -28,6 +28,16 @@
 
     <string name="cpu_title">CPU tuning</string>
     <string name="cpu_summary">Pick a governor, set per-cluster frequencies</string>
+
+    <string name="cpu_governor_title">Governor</string>
+    <string name="cpu_governor_dialog">Choose a governor</string>
+    <string name="cpu_min_title">Minimum frequency</string>
+    <string name="cpu_min_dialog">Choose the lowest frequency</string>
+    <string name="cpu_max_title">Maximum frequency</string>
+    <string name="cpu_max_dialog">Choose the highest frequency</string>
+    <string name="cpu_no_policies">No cpufreq policies are available</string>
+    <string name="cpu_cluster_efficiency">Efficiency cluster</string>
+    <string name="cpu_cluster_performance">Performance cluster</string>
     <string name="thermal_title">Thermal profiles</string>
     <string name="thermal_summary">Choose a thermal mode per app</string>
     <string name="speaker_title">Clear speaker</string>
