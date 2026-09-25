@@ -47,7 +47,8 @@
     <string name="dt2w_title">Double tap to wake</string>
     <string name="dt2w_summary">Tap twice on the lock screen to wake the display</string>
 
-    <string name="vibration_title">Vibration strength</string>
+    <string name="category_vibration">Vibration</string>
+    <string name="vibration_title">Strength</string>
     <string name="vibration_summary">Strength of the haptic motor</string>
 
     <string name="thermal_profiles_placeholder">Per-app thermal profiles are not wired up yet.</string>

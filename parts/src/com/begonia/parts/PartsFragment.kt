@@ -4,12 +4,15 @@ import android.os.Bundle
 import android.provider.Settings
 import androidx.preference.SwitchPreferenceCompat
 import com.android.settingslib.collapsingtoolbar.BasePreferencesFragment
+import com.android.settingslib.widget.SliderPreference
+import com.begonia.parts.util.Haptics
 
 class PartsFragment : BasePreferencesFragment() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.parts_dashboard, rootKey)
         bindDoubleTapToWake()
+        bindVibration()
     }
 
     private fun bindDoubleTapToWake() {
@@ -25,6 +28,14 @@ class PartsFragment : BasePreferencesFragment() {
                 Settings.Secure.DOUBLE_TAP_TO_WAKE,
                 if (enabled) 1 else 0
             )
+            true
+        }
+    }
+
+    private fun bindVibration() {
+        val slider = findPreference<SliderPreference>(Haptics.KEY_LEVEL) ?: return
+        slider.setOnPreferenceChangeListener { _, newValue ->
+            Haptics.setLevel(newValue as Int)
             true
         }
     }

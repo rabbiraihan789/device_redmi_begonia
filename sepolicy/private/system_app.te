@@ -4,3 +4,10 @@ allow system_app sysfs:dir r_dir_perms;
 allow system_app sysfs_devices_system_cpu:dir r_dir_perms;
 allow system_app sysfs_devices_system_cpu:file rw_file_perms;
 allow system_app sysfs_devices_system_cpu:lnk_file rw_file_perms;
+
+# XiaomiParts (system app): scale the haptic motor through the vibrator
+# nodes. The /sys/class/leds symlink tree is typed sysfs_leds; reaching
+# it needs dir traversal plus rw on the vmax attribute files.
+allow system_app sysfs_leds:dir search;
+allow system_app sysfs_leds:{ file lnk_file } rw_file_perms;
+allow system_app sysfs_vibrator:file rw_file_perms;
