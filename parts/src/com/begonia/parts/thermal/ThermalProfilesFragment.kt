@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.pm.ResolveInfo
+import android.app.Application
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -30,7 +31,7 @@ class ThermalProfilesFragment : Fragment(), ApplicationsState.Callbacks {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        appState = ApplicationsState.getInstance(requireContext().applicationContext)
+        appState = ApplicationsState.getInstance(requireContext().applicationContext as Application)
         appSession = appState.newSession(this)
         appSession.onResume()
         launcherFilter = LauncherAppsFilter(requireContext().packageManager)

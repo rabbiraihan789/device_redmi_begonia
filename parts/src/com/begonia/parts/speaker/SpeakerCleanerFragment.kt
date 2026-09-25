@@ -75,7 +75,13 @@ class SpeakerCleanerFragment : BasePreferencesFragment() {
             player = next
             toneSwitch?.isEnabled = false
             next.start()
-        } catch (e: IOException | IllegalArgumentException | IllegalStateException) {
+        } catch (e: IOException) {
+            Log.e(TAG, "Unable to begin speaker sweep", e)
+            next.reset()
+            next.release()
+            return false
+        } catch (e: RuntimeException) {
+
             Log.e(TAG, "Unable to begin speaker sweep", e)
             next.reset()
             next.release()

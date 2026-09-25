@@ -14,6 +14,8 @@ class CpuFragment : BasePreferencesFragment() {
 
     private val sysfsBase = "/sys/devices/system/cpu/cpufreq"
 
+    override fun getTitle(): CharSequence = getString(R.string.cpu_title)
+
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         val screen = preferenceManager.createPreferenceScreen(requireContext())
         addGovernorSection(screen)

@@ -9,6 +9,8 @@ import com.begonia.parts.util.Haptics
 
 class PartsFragment : BasePreferencesFragment() {
 
+    override fun getTitle(): CharSequence = getString(R.string.app_name)
+
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.parts_dashboard, rootKey)
         bindDoubleTapToWake()
