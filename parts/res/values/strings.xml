@@ -51,5 +51,11 @@
     <string name="vibration_title">Strength</string>
     <string name="vibration_summary">Strength of the haptic motor</string>
 
-    <string name="thermal_profiles_placeholder">Per-app thermal profiles are not wired up yet.</string>
+    <string name="mode_default">Default</string>
+    <string name="mode_benchmark">Benchmark</string>
+    <string name="mode_browser">Browser</string>
+    <string name="mode_camera">Camera</string>
+    <string name="mode_dialer">Dialer</string>
+    <string name="mode_gaming">Gaming</string>
+    <string name="mode_streaming">Streaming</string>
 </resources>
