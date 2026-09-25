@@ -1,21 +1,33 @@
-//
-// Copyright (C) 2017-2021 The LineageOS Project
-//
+// Copyright (C) 2026 The LineageOS Project
 // SPDX-License-Identifier: Apache-2.0
-//
 
 android_app {
     name: "XiaomiParts",
 
-    srcs: ["src/**/*.java"],
+    srcs: ["src/**/*.kt"],
     resource_dirs: ["res"],
+
     certificate: "platform",
     platform_apis: true,
     system_ext_specific: true,
     privileged: true,
 
     static_libs: [
-        "org.lineageos.settings.resources",
         "SettingsLib",
+        "androidx.preference_preference",
+        "androidx.recyclerview_recyclerview",
+        "kotlin-stdlib",
     ],
+
+    required: [
+        "privapp-permissions_com.begonia.parts",
+    ],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions_com.begonia.parts",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+    src: "privapp-permissions_com.begonia.parts.xml",
+    filename_from_src: true,
 }
