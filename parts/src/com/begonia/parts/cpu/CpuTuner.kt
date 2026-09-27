@@ -1,6 +1,7 @@
 package com.begonia.parts.cpu
 
 import android.content.Context
+import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
 import com.begonia.parts.R
 import com.begonia.parts.util.KernelNode
@@ -62,6 +63,16 @@ object CpuTuner {
     fun floorKey(policy: String) = KEY_FLOOR_PREFIX + policy
     fun ceilingKey(policy: String) = KEY_CEILING_PREFIX + policy
 
+    fun prefsLong(prefs: SharedPreferences, key: String, default: Long): Long {
+        val stored = prefs.all[key] ?: return default
+        return when (stored) {
+            is Long -> stored
+            is Int -> stored.toLong()
+            is String -> stored.toLongOrNull() ?: default
+            else -> default
+        }
+    }
+
     fun prefs(context: Context) = PreferenceManager.getDefaultSharedPreferences(context)
 
     fun applyGovernor(policy: String, governor: String) {
@@ -81,14 +92,14 @@ object CpuTuner {
         val policies = policies()
         for (policy in policies) applyGovernor(policy, governor)
         for (policy in policies) {
-            val floor = prefs.getLong(floorKey(policy), -1L)
-            val ceiling = prefs.getLong(ceilingKey(policy), -1L)
+            val floor = prefsLong(prefs, floorKey(policy), -1L)
+            val ceiling = prefsLong(prefs, ceilingKey(policy), -1L)
             if (floor > 0) KernelNode.write("$SYS_CPUFREQ/$policy/scaling_min_freq", floor)
             if (ceiling > 0) KernelNode.write("$SYS_CPUFREQ/$policy/scaling_max_freq", ceiling)
         }
         if (governor == "userspace") {
             for (policy in policies) {
-                var target = prefs.getLong(ceilingKey(policy), -1L)
+                var target = prefsLong(prefs, ceilingKey(policy), -1L)
                 if (target <= 0) target = KernelNode.readLong("$SYS_CPUFREQ/$policy/scaling_max_freq")
                 if (target > 0) KernelNode.write("$SYS_CPUFREQ/$policy/scaling_setspeed", target)
             }

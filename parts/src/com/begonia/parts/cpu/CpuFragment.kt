@@ -81,7 +81,8 @@ class CpuFragment : BasePreferencesFragment() {
     ): ListPreference {
         val prefs = CpuTuner.prefs(requireContext())
         val sysfsNode = if (isFloor) "scaling_min_freq" else "scaling_max_freq"
-        val persisted = prefs.getLong(
+        val persisted = CpuTuner.prefsLong(
+            prefs,
             if (isFloor) CpuTuner.floorKey(policy) else CpuTuner.ceilingKey(policy),
             -1L
         )
@@ -120,7 +121,7 @@ class CpuFragment : BasePreferencesFragment() {
     private fun syncUserspaceSpeed() {
         val prefs = CpuTuner.prefs(requireContext())
         for (policy in CpuTuner.policies()) {
-            var target = prefs.getLong(CpuTuner.ceilingKey(policy), -1L)
+            var target = CpuTuner.prefsLong(prefs, CpuTuner.ceilingKey(policy), -1L)
             if (target <= 0) target = KernelNode.readLong("$sysfsBase/$policy/scaling_max_freq")
             if (target > 0) KernelNode.write("$sysfsBase/$policy/scaling_setspeed", target)
         }
